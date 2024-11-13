@@ -8,7 +8,7 @@ import java.util.Objects;
 
 
 @Entity
-@Table(name = "db_belonging")
+@Table(name = "tb_belonging")
 public class Belonging {
 
     @EmbeddedId
