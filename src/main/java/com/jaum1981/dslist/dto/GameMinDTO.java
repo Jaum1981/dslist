@@ -1,6 +1,7 @@
 package com.jaum1981.dslist.dto;
 
 import com.jaum1981.dslist.entities.Game;
+import com.jaum1981.dslist.projections.GameMinProjection;
 import com.jaum1981.dslist.repositories.GameRepository;
 
 public class GameMinDTO {
@@ -18,6 +19,15 @@ public class GameMinDTO {
     }
 
     public GameMinDTO(Game entity) {
+        id = entity.getId();
+        title = entity.getTitle();
+        year = entity.getYear();
+        imgUrl = entity.getImgUrl();
+        shortDescription = entity.getShortDescription();
+    }
+
+
+    public GameMinDTO(GameMinProjection entity) {
         id = entity.getId();
         title = entity.getTitle();
         year = entity.getYear();
